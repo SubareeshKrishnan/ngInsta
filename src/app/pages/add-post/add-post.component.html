@@ -1,0 +1,90 @@
+<div class="container">
+  <div class="row mt-5 mb-5">
+    <div class="col col-lg-6">
+      <div class="card">
+        <div class="card-header fw-bold text-center">Create a post</div>
+        <div class="progress" style="height: 5px" *ngIf="uploadProgress$">
+          <div
+            class="progress-bar progress-bar-striped bg-dark progress-bar-animated"
+            [ngStyle]="{ width: 100 + '%' }"
+          ></div>
+        </div>
+        <div class="card-body">
+          <form>
+            <div class="mb-3">
+              <label for="title" class="form-label">Title</label>
+              <input
+                [(ngModel)]="title"
+                type="text"
+                class="form-control"
+                name="title"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="location" class="form-label">Location</label>
+              <input
+                [(ngModel)]="locationName"
+                type="text"
+                name="location"
+                class="form-control"
+              />
+            </div>
+            <div class="form-floating mb-3">
+              <textarea
+                [(ngModel)]="description"
+                class="form-control"
+                placeholder="Leave a comment here"
+                id="desc"
+                name="desc"
+                style="height: 200px"
+              ></textarea>
+              <label for="desc">Description</label>
+            </div>
+            <div
+              style="
+                height: 100px;
+                width: 80%;
+                border-radius: 10px;
+                background-color: gainsboro;
+                position: relative;
+              "
+              class="container mb-3 text-center"
+            >
+              <label for="imagepicker">
+                <p class="centerfile">
+                  <fa-icon [icon]="faPaperclip"></fa-icon> Choose an image
+                </p>
+              </label>
+
+              <input
+                type="file"
+                name="image"
+                id="imagepicker"
+                accept="image/*"
+                multiple="{false}"
+                class="hidden"
+                hidden
+                (change)="onFileupload($event)"
+              />
+            </div>
+            <div class="center">
+              <button
+                (click)="onPost()"
+                [disabled]="!picture"
+                type="submit"
+                class="btn btn-dark"
+              >
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col col-lg-6">
+      <div>
+        <img [src]="picture" class="m-2 rounded" />
+      </div>
+    </div>
+  </div>
+</div>

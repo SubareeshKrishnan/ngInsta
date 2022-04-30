@@ -1,0 +1,25 @@
+<div class="card mb-3">
+  <div class="row">
+    <div
+      class="col-md-4"
+      style="display: flex; justify-content: center; align-items: center"
+    >
+      <img
+        [src]="user.picture"
+        style="width: 120px; height: 120px; margin: 5px"
+        class="rounded-circle img-thumbnail"
+      />
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{ user.name | titlecase }}</h5>
+        <p class="card-text"><span>Bio : </span>{{ user.bio }}</p>
+        <p class="card-text">
+          <small class="text-muted"
+            ><span>Country: </span>{{ user.country }}</small
+          >
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

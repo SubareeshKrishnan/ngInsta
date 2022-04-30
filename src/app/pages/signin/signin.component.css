@@ -1,0 +1,10 @@
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bgimage {
+  background: linear-gradient(to bottom right, grey, black);
+  margin-bottom: 10px;
+  border-radius: 10px;
+}

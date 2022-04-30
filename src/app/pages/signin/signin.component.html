@@ -1,0 +1,35 @@
+<div class="container">
+  <div
+    class="mt-5 card border-dark w-50"
+    style="margin-left: auto; margin-right: auto"
+  >
+    <div class="card-header text-center text-dark text-uppercase fw-bold">
+      Sign in
+    </div>
+    <div class="card-body">
+      <div style="height: 150px" class="bgimage"></div>
+      <form (ngSubmit)="onSignin(f)" #f="ngForm">
+        <div class="mb-3">
+          <label for="email" class="form-label">Email address</label>
+          <input
+            ngModel
+            type="email"
+            class="form-control"
+            name="email"
+            aria-describedby="emailHelp"
+          />
+          <div id="emailHelp" class="form-text">
+            We'll never share your email with anyone else.
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input ngModel type="password" name="password" class="form-control" />
+        </div>
+        <div class="center">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

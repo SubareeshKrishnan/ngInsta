@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "nginsta-620b9": {
+      "hosting": {
+        "ngInsta": [
+          "nginsta-620b9"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "nginsta-620b9"
+  }
+}

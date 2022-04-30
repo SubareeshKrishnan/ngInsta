@@ -1,0 +1,18 @@
+span {
+  border-radius: 5px;
+  border: 1px solid crimson;
+  padding: 3px;
+}
+span:hover {
+  background-color: crimson;
+  color: aliceblue;
+  transition: all 0.5s;
+}
+a {
+  text-decoration: none;
+}
+a:visited,
+a:link {
+  text-decoration: none;
+  color: inherit;
+}

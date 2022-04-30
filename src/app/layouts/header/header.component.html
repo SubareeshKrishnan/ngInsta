@@ -1,0 +1,55 @@
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" [routerLink]="['/']">ngInsta</a>
+
+    <div>
+      <div
+        *ngIf="email"
+        class="text-white float-right me-3"
+        style="display: inline"
+      >
+        {{ email }}
+      </div>
+      <button
+        class="me-2 btn btn-outline-light"
+        [routerLink]="['/']"
+        type="button"
+      >
+        Home
+      </button>
+      <button
+        [routerLink]="['/signup']"
+        *ngIf="!email"
+        class="me-2 btn btn-primary"
+        type="button"
+      >
+        Signup
+      </button>
+      <button
+        [routerLink]="['/signin']"
+        *ngIf="!email"
+        class="me-2 btn btn-success"
+        type="button"
+      >
+        Signin
+      </button>
+      <button
+        [routerLink]="['/addpost']"
+        class="me-2 btn btn-warning"
+        type="button"
+        *ngIf="email"
+      >
+        Post a story
+      </button>
+      <button
+        [routerLink]="['/signin']"
+        class="me-2 btn btn-outline-danger"
+        type="button"
+        *ngIf="email"
+        (click)="handleSignout()"
+      >
+        Logout
+      </button>
+    </div>
+  </div>
+</nav>
